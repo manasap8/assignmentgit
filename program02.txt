@@ -1,0 +1,51 @@
+PS F:\git works\lab02> git init
+Initialized empty Git repository in F:/git works/lab02/.git/
+PS F:\git works\lab02> git add c1
+PS F:\git works\lab02> git commit -m 'c1 file commited'
+[master (root-commit) 27b06ec] c1 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c1
+PS F:\git works\lab02> git status
+On branch master
+nothing to commit, working tree clean
+PS F:\git works\lab02> git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+PS F:\git works\lab02> git add c2
+PS F:\git works\lab02> git commit -m 'c2 file commited'
+[feature-branch fd7fee8] c2 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c2
+PS F:\git works\lab02> git add c3
+PS F:\git works\lab02> git commit -m 'c3 file commited'
+[feature-branch 829bc2b] c3 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c3
+PS F:\git works\lab02> git switch master
+Switched to branch 'master'
+PS F:\git works\lab02> git merge feature-branch
+Updating 27b06ec..829bc2b
+Fast-forward
+ c2 | 0
+ c3 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c2
+ create mode 100644 c3
+PS F:\git works\lab02> git log --all --graph
+* commit 829bc2bab5f1ebb188ddb93b4bdd9a5d5dcc0702 (HEAD -> master, feature-branch)
+| Author: 4JN24CS086 <manasa88manu@gmail.com>
+| Date:   Mon Jan 12 21:37:00 2026 +0530
+|
+|     c3 file commited
+|
+* commit fd7fee8b0f6d359ec59f2e79904b0c16ade5d646
+| Author: 4JN24CS086 <manasa88manu@gmail.com>
+| Date:   Mon Jan 12 21:36:51 2026 +0530
+|
+|     c2 file commited
+|
+* commit 27b06ec6ed459279cbd0dea7ac5bcb56ddf504e6
+  Author: 4JN24CS086 <manasa88manu@gmail.com>
+  Date:   Mon Jan 12 21:35:45 2026 +0530
+
+      c1 file commited
+PS F:\git works\lab02> 

@@ -1,0 +1,47 @@
+PS F:\git works\lab09> git init
+Initialized empty Git repository in F:/git works/lab09/.git/
+PS F:\git works\lab09> git add xyz1
+PS F:\git works\lab09> git commit -m 'xyz1 file commited'
+[master (root-commit) abcfecb] xyz1 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 xyz1
+PS F:\git works\lab09> git add pqrs2
+PS F:\git works\lab09> git commit -m 'pqrs2 file commited'
+[master 717b9cc] pqrs2 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 pqrs2
+PS F:\git works\lab09> git add mnop3
+PS F:\git works\lab09> git commit -m 'mnop3 file commited'
+[master 9038e48] mnop3 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mnop3
+PS F:\git works\lab09> git log 9038e
+commit 9038e4873b67fbc01d9fbe1ae5fb670aa8575b7e (HEAD -> master)
+Author: 4JN24CS086 <manasa88manu@gmail.com>
+Date:   Tue Jan 13 20:07:52 2026 +0530
+
+    mnop3 file commited
+
+commit 717b9cc25ac3032c8e4c3a10b1a02c788158c9f4
+Author: 4JN24CS086 <manasa88manu@gmail.com>
+Date:   Tue Jan 13 20:07:27 2026 +0530
+
+    pqrs2 file commited
+
+commit abcfecb52be198ff78626c388a83d53f6b8c3c43
+Author: 4JN24CS086 <manasa88manu@gmail.com>
+Date:   Tue Jan 13 20:06:55 2026 +0530
+
+    xyz1 file commited
+PS F:\git works\lab09> git show 9038e
+commit 9038e4873b67fbc01d9fbe1ae5fb670aa8575b7e (HEAD -> master)
+Author: 4JN24CS086 <manasa88manu@gmail.com>
+Date:   Tue Jan 13 20:07:52 2026 +0530
+
+    mnop3 file commited
+
+diff --git a/mnop3 b/mnop3
+new file mode 100644
+index 0000000..e69de29
+PS F:\git works\lab09> git log -n 1 --pretty=format:"%h, %an, %ar:%s" 9038e 
+9038e48, 4JN24CS086, 8 minutes ago:mnop3 file commited

@@ -1,0 +1,44 @@
+PS F:\git works\lab03> git init
+Initialized empty Git repository in F:/git works/lab03/.git/
+PS F:\git works\lab03> git add file1
+PS F:\git works\lab03> git commit -m 'file1 commited'
+[master (root-commit) e44c004] file1 commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1
+PS F:\git works\lab03> git add file2
+PS F:\git works\lab03> git stash -m 'file2 stashed'
+Saved working directory and index state On master: file2 stashed
+PS F:\git works\lab03> git add file3
+PS F:\git works\lab03> git stash -m 'file3 stashed'
+Saved working directory and index state On master: file3 stashed
+PS F:\git works\lab03> git add file4
+PS F:\git works\lab03> git stash -m 'file4 stashed'
+Saved working directory and index state On master: file4 stashed
+PS F:\git works\lab03> git stash list
+stash@{0}: On master: file4 stashed
+stash@{1}: On master: file3 stashed
+stash@{2}: On master: file2 stashed
+PS F:\git works\lab03> git checkout -b fb
+Switched to a new branch 'fb'
+PS F:\git works\lab03> git stash list    
+stash@{0}: On master: file4 stashed
+stash@{1}: On master: file3 stashed
+stash@{2}: On master: file2 stashed
+PS F:\git works\lab03> git stash apply 1
+On branch fb
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file3
+
+PS F:\git works\lab03> git stash pop
+On branch fb
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file3
+        new file:   file4
+
+Dropped refs/stash@{0} (bc9ffe99e5a0dde9ac3d612d5dd326d0af53e1fe)
+PS F:\git works\lab03> git stash list
+stash@{0}: On master: file3 stashed
+stash@{1}: On master: file2 stashed
+PS F:\git works\lab03> 

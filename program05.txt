@@ -1,0 +1,129 @@
+PS F:\git works\lab05> git config --global --replace-all user.name 4JN24CS086
+PS F:\git works\lab05> git config --global --replace-all user.email manasa88manu@gmail.com
+PS F:\git works\lab05> git init
+Initialized empty Git repository in F:/git works/lab05/.git/
+PS F:\git works\lab05> git clone https://github.com/4JN24CS086/gitlab05.git
+Cloning into 'gitlab05'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 12 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (12/12), done.
+Resolving deltas: 100% (2/2), done.
+PS F:\git works\lab05> cd gitlab05
+PS F:\git works\lab05\gitlab05> git pull https://github.com/4JN24CS086/gitlab05.git
+From https://github.com/4JN24CS086/gitlab05
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+PS F:\git works\lab05\gitlab05> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS F:\git works\lab05\gitlab05> git checkout -b fb
+Switched to a new branch 'fb'
+PS F:\git works\lab05\gitlab05> git add fb1
+PS F:\git works\lab05\gitlab05> git commit -m 'fb1 file commited' 
+[fb 9fe40de] fb1 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fb1
+PS F:\git works\lab05\gitlab05> git add fb2
+PS F:\git works\lab05\gitlab05> git commit -m 'fb2 file commited' 
+[fb 0f2ef45] fb2 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fb2
+PS F:\git works\lab05\gitlab05> git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'
+PS F:\git works\lab05\gitlab05> git add file1
+PS F:\git works\lab05\gitlab05> git commit -m  'file1 commited'    
+[main ff5321a] file1 commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1
+PS F:\git works\lab05\gitlab05> git log --all --graph
+* commit ff5321abeaa2536bb5e5d63d5ff08a7586719ab6 (HEAD -> main)
+| Author: 4JN24CS086 <manasa88manu@gmail.com>
+| Date:   Tue Jan 13 08:31:26 2026 +0530
+|
+|     file1 commited
+|
+| * commit 0f2ef459a4b7842ed0028cf4af726b887e1f01aa (fb)
+| | Author: 4JN24CS086 <manasa88manu@gmail.com>
+| | Date:   Tue Jan 13 08:28:32 2026 +0530
+| |
+| |     fb2 file commited
+| |
+| * commit 9fe40deee55bef43aa80747d0d20c1518dc02352
+|/  Author: 4JN24CS086 <manasa88manu@gmail.com>
+|   Date:   Tue Jan 13 08:28:23 2026 +0530
+|
+|       fb1 file commited
+|
+* commit 6c236b70ba24bfd6eba268306ae323ef598033ec (origin/main, origin/HEAD)
+| Author: 4JN24CS086 <manasa88manu@gmail.com>
+| Date:   Mon Jan 12 22:54:56 2026 +0530
+|
+|     Update xyz.py
+|
+* commit 306cbc55b15cead2385795634191c9ee21adfa86
+| Author: 4JN24CS086 <manasa88manu@gmail.com>
+| Date:   Mon Jan 12 22:50:20 2026 +0530
+|
+|     Create xyz.py
+|
+* commit 2fa97881f7d8bd2dac34b2a7a8767fd60340f1f9
+| Author: 4JN24CS086 <manasa88manu@gmail.com>
+| Date:   Mon Jan 12 22:46:43 2026 +0530
+|
+|     Create abc.c
+|
+* commit 98fbaab80a7f2a75132f078fed2bed71917b86ea
+  Author: 4JN24CS086 <manasa88manu@gmail.com>
+  Date:   Mon Jan 12 22:45:47 2026 +0530
+
+      Initial commit
+PS F:\git works\lab05\gitlab05> git rebase
+Current branch main is up to date.
+PS F:\git works\lab05\gitlab05> git log --all --graph
+* commit ff5321abeaa2536bb5e5d63d5ff08a7586719ab6 (HEAD -> main)
+| Author: 4JN24CS086 <manasa88manu@gmail.com>
+| Date:   Tue Jan 13 08:31:26 2026 +0530
+|
+|     file1 commited
+|
+| * commit 0f2ef459a4b7842ed0028cf4af726b887e1f01aa (fb)
+| | Author: 4JN24CS086 <manasa88manu@gmail.com>
+| | Date:   Tue Jan 13 08:28:32 2026 +0530
+| | 
+| |     fb2 file commited
+| |
+| * commit 9fe40deee55bef43aa80747d0d20c1518dc02352
+|/  Author: 4JN24CS086 <manasa88manu@gmail.com>
+|   Date:   Tue Jan 13 08:28:23 2026 +0530
+|
+|       fb1 file commited
+|
+* commit 6c236b70ba24bfd6eba268306ae323ef598033ec (origin/main, origin/HEAD)
+| Author: 4JN24CS086 <manasa88manu@gmail.com>
+| Date:   Mon Jan 12 22:54:56 2026 +0530
+|
+|     Update xyz.py
+|
+* commit 306cbc55b15cead2385795634191c9ee21adfa86
+| Author: 4JN24CS086 <manasa88manu@gmail.com>
+| Date:   Mon Jan 12 22:50:20 2026 +0530
+|
+|     Create xyz.py
+|
+* commit 2fa97881f7d8bd2dac34b2a7a8767fd60340f1f9
+| Author: 4JN24CS086 <manasa88manu@gmail.com>
+| Date:   Mon Jan 12 22:46:43 2026 +0530
+|
+|     Create abc.c
+|
+* commit 98fbaab80a7f2a75132f078fed2bed71917b86ea
+  Author: 4JN24CS086 <manasa88manu@gmail.com>
+  Date:   Mon Jan 12 22:45:47 2026 +0530
+
+      Initial commit
+PS F:\git works\lab05\gitlab05> 

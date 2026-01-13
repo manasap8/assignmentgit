@@ -1,0 +1,24 @@
+PS F:\git works\lab09> git init
+PS F:\git works\lab09> git log -n 5
+commit 9038e4873b67fbc01d9fbe1ae5fb670aa8575b7e (HEAD -> master)
+Author: 4JN24CS086 <manasa88manu@gmail.com>
+Date:   Tue Jan 13 20:07:52 2026 +0530
+
+    mnop3 file commited
+
+commit 717b9cc25ac3032c8e4c3a10b1a02c788158c9f4
+Author: 4JN24CS086 <manasa88manu@gmail.com>
+Date:   Tue Jan 13 20:07:27 2026 +0530
+
+    pqrs2 file commited
+
+commit abcfecb52be198ff78626c388a83d53f6b8c3c43
+Author: 4JN24CS086 <manasa88manu@gmail.com>
+Date:   Tue Jan 13 20:06:55 2026 +0530
+
+    xyz1 file commited
+PS F:\git works\lab09> git log -n 5 --oneline
+9038e48 (HEAD -> master) mnop3 file commited
+717b9cc pqrs2 file commited
+abcfecb xyz1 file commited
+PS F:\git works\lab09> 

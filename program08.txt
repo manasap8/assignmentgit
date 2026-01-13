@@ -1,0 +1,52 @@
+PS F:\git works\lab08> git init
+Initialized empty Git repository in F:/git works/lab08/.git/
+PS F:\git works\lab08> git add note1
+PS F:\git works\lab08> git commit -m 'note1 file commited'
+[master (root-commit) 46ac4ed] note1 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 note1
+PS F:\git works\lab08> git checkout -b fb
+Switched to a new branch 'fb'
+PS F:\git works\lab08> git add note2
+PS F:\git works\lab08> git commit -m 'note2 file commited'
+[fb ea40026] note2 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 note2
+PS F:\git works\lab08> git add note3
+PS F:\git works\lab08> git commit -m 'note3 file commited'
+[fb f9d18f7] note3 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 note3
+PS F:\git works\lab08> git add note4
+PS F:\git works\lab08> git commit -m 'note4 file commited'
+[fb 89dfce4] note4 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 note4
+PS F:\git works\lab08> git add note5
+PS F:\git works\lab08> git commit -m 'note5 file commited'
+[fb 07669d4] note5 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 note5
+PS F:\git works\lab08> git switch master
+Switched to branch 'master'
+PS F:\git works\lab08> git log --oneline fb
+07669d4 (fb) note5 file commited
+89dfce4 note4 file commited
+f9d18f7 note3 file commited
+ea40026 note2 file commited
+46ac4ed (HEAD -> master) note1 file commited
+PS F:\git works\lab08> git cherry-pick ea40026
+[master 6c34888] note2 file commited
+ Date: Tue Jan 13 19:58:30 2026 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 note2
+PS F:\git works\lab08> git cherry-pick 89dfce4^..07669d4
+[master 9733554] note4 file commited
+ Date: Tue Jan 13 19:58:47 2026 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 note4
+[master 09136d8] note5 file commited
+ Date: Tue Jan 13 19:58:58 2026 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 note5
+PS F:\git works\lab08> 

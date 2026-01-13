@@ -1,0 +1,18 @@
+PS F:\git works\lab12> git init
+Reinitialized existing Git repository in F:/git works/lab12/.git/
+PS F:\git works\lab12> git add hello.py
+PS F:\git works\lab12> git commit -m 'hello.py file commited'
+[master (root-commit) d199cb0] hello.py file commited
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.py
+PS F:\git works\lab12> git add hello.py
+PS F:\git works\lab12> git commit -m 'hello.py file commited'
+[master 9dfe39f] hello.py file commited
+ 1 file changed, 1 insertion(+)
+PS F:\git works\lab12> git revert 9dfe39f
+[master de87d93] Revert "hello.py file commited"
+ 1 file changed, 1 deletion(-)
+PS F:\git works\lab12> git revert de87d93
+[master 1fb9201] Reapply "hello.py file commited"
+ 1 file changed, 1 insertion(+)
+PS F:\git works\lab12> 
