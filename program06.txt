@@ -1,0 +1,77 @@
+PS F:\git works\lab06> git config --global --replace-all user.name 4JN24CS086
+PS F:\git works\lab06> git config --global --replace-all user.email manasa88manu@gmail.com
+PS F:\git works\lab06> git init 
+Initialized empty Git repository in F:/git works/lab06/.git/
+PS F:\git works\lab06> git add abc1
+PS F:\git works\lab06> git commit -m 'abc1 file commited'
+[master (root-commit) 8ccaec7] abc1 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abc1
+PS F:\git works\lab06> git add abc2
+PS F:\git works\lab06> git commit -m 'abc2 file commited'
+[master bd6faa6] abc2 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abc2
+PS F:\git works\lab06> git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+PS F:\git works\lab06> git add abc3
+PS F:\git works\lab06> git commit -m 'abc3 file commited'
+[feature-branch 3e8ac74] abc3 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abc3
+PS F:\git works\lab06> git add abc4
+PS F:\git works\lab06> git commit -m 'abc4 file commited'
+[feature-branch 2a3c433] abc4 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abc4
+PS F:\git works\lab06> git switch master       
+Switched to branch 'master'
+PS F:\git works\lab06> git add abc5
+PS F:\git works\lab06> git commit -m 'abc5 file commited'
+[master 4574a7a] abc5 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abc5
+PS F:\git works\lab06> git merge feature-branch -m 'feature merged to master'
+Merge made by the 'ort' strategy.
+ abc3 | 0
+ abc4 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abc3
+ create mode 100644 abc4
+PS F:\git works\lab06> git log --all --graph
+*   commit 51f19bfdfc20fb4366cc82ed2d7fdaa33e11be23 (HEAD -> master)
+|\  Merge: 4574a7a 2a3c433
+| | Author: 4JN24CS086 <manasa88manu@gmail.com>
+| | Date:   Tue Jan 13 19:35:44 2026 +0530
+| |
+| |     feature merged to master
+| | 
+| * commit 2a3c4334217e53ac498a0bcec38e14ed18bf7ee4 (feature-branch)
+| | Author: 4JN24CS086 <manasa88manu@gmail.com>
+| | Date:   Tue Jan 13 19:34:15 2026 +0530
+| |
+| |     abc4 file commited
+| | 
+| * commit 3e8ac74bfc57a5e62d5fe4fb59ed5b79b18cbb0d
+| | Author: 4JN24CS086 <manasa88manu@gmail.com>
+| | Date:   Tue Jan 13 19:34:05 2026 +0530
+| |
+| |     abc3 file commited
+| |
+* | commit 4574a7af654af1ccc889762ea0c3bf46d9e97208
+|/  Author: 4JN24CS086 <manasa88manu@gmail.com>
+|   Date:   Tue Jan 13 19:35:05 2026 +0530
+|
+|       abc5 file commited
+|
+* commit bd6faa6ded49bb2f6cf559424c41c0d6fddfa817
+| Author: 4JN24CS086 <manasa88manu@gmail.com>
+| Date:   Tue Jan 13 19:33:12 2026 +0530
+|
+|     abc2 file commited
+|
+* commit 8ccaec721425da5875452d96e314547e64951f2b
+  Author: 4JN24CS086 <manasa88manu@gmail.com>
+  Date:   Tue Jan 13 19:32:49 2026 +0530
+
+      abc1 file commited
