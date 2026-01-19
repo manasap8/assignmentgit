@@ -1,0 +1,9 @@
+PS F:\git works\lab01> git config --global --replace-all user.name 4JN24CS086
+PS F:\git works\lab01> git config --global --replace-all user.email manasa88manu@gmail.com
+PS F:\git works\lab01> git init
+Initialized empty Git repository in F:/git works/lab01/.git/
+PS F:\git works\lab01> git add pgm1.c
+PS F:\git works\lab01> git commit -m 'pgm1 file commited'
+[master (root-commit) 30a915b] pgm1 file commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 pgm1.c
